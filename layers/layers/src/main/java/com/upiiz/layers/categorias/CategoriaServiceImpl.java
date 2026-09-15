@@ -25,8 +25,8 @@ public class CategoriaServiceImpl implements CategoriaService {
         // No importar si usa mayusculas o minusculas
         // no se debe duplicar
         categoriaRepository.findByDescripcionIgnoreCase(nuevaCategoriaDto.getDescripcion()).ifPresent(e ->{
-            // mandar error
-            // termina el metodo
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "Ya existe una categoria con la descripcion: " + nuevaCategoriaDto.getDescripcion());
         });
 
         CategoriaEntity nuevaCategoria = new CategoriaEntity(nuevaCategoriaDto.getDescripcion());
