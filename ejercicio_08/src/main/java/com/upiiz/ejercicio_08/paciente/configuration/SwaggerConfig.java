@@ -13,18 +13,18 @@ import org.springframework.context.annotation.Configuration;
         info = @Info(
                 title = "Ejercicio 08",
                 version = "1.0.0",
-                description = "Documentación donde hacemos como que sabemos que hacemos",
+                description = "Documentación de la API de pacientes",
                 termsOfService = "Usalo bajo tu propio riesgo",
                 contact = @Contact(
-                        name = "Ferchiwinguis",
-                        email = "fer@correo.com"
+                        name = "Fernanda Salazar Quiñonez",
+                        email = "fsalazarq2000@alumnos.ipn.mx"
                 ),
                 license = @License(
                         name = "Con la licencia de dios y del profe"
                 )
         ),
         servers = {
-                @Server(description = "Local", url = "http://localhost:8080")
+                @Server(description = "Render", url = "https://ejercicio08-pace.onrender.com")
         }
 )
 @Configuration
