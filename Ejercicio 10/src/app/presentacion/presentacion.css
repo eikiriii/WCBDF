@@ -1,0 +1,49 @@
+/* Base: móvil */
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr;   /* una columna */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+  }
+}
+
+b {
+    color: #FF0088;
+}
+a {
+    color: #BB00FF;
+}
+
+h1 {
+    color: #FF0088;
+}
+
+#contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+#contenedor > div {
+  width: 33%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
